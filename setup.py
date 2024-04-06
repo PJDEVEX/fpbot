@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='medical-bot',
+    name='fpbot',
     version='0.0.1',
     author='PJ',
     author_email='piyankara.jayadewa@gmail.com',
-    description='Helpfull medical bot',
+    description='Helpfull finance buddy for fiancial accountents, auditors and consultants',
     license='MIT',
     install_requires=['ctransformers==0.2.5',
               'sentence-transformers==2.2.2',

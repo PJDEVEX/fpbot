@@ -18,6 +18,5 @@ flask==3.0.2
 pypdf
 python-dotenv
 black
+
 -e .
-
-
