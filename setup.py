@@ -12,7 +12,7 @@ setup(
               'pinecone-client==3.2.2',
               'langchain==0.1.14',
               'langchain-pinecone',
-              'flask==3.0.2',
+              'flask',
               'pypdf',
               'python-dotenv',
               'black',
