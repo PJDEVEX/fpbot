@@ -4,37 +4,50 @@
 
 ## How to set up the project
 
-- Clone the repo
+### Step 1: Clone the repo
 ```bash
-Project repo: 
+Project repo: https://github.com/PJDEVEX/fpbot
 ```
+### Step 2: Create Vierual Environment
 - Activate virtual environment
 ```bash
-conda activate env
+source ~/anaconda3/bin/activate
 ```
-- Install project dependencies
+```bash
+conda create -n fpbot python=3.10 -y
+```
+```bash
+conda activate fbbot
+```
+
+### Step3: Install project dependencies
 ```bash
 pip3 install -r requirements.txt
 ```
 
-- .env
-```bash
+### Step4: Define Env varialbes
+- create `.env`
+
+```ini
 import os
 
 PINECONE_API_KEY=xxxxxxxxxxxxxxxxxxxxxx
 PINECONE_INDEX_NAME=xxx-xxxxxxxxxxxxxxx
 PINECONE_ENV=xxxxxxxxxxxxxxxxxxxxxxxxxx
 
-OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxx
 EMBEDDING_MODEL_NAME=xxxxxxxxxxxxxxxxxx
 
 ```
 
-
+### Step5: Download
 
 - Chat Model
 
-The chat model used is [llama-2-7b-chat.ggmlv3.q4_0.bin](https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/blob/main/llama-2-7b-chat.ggmlv3.q4_0.bin) that can be downloaded from [here...](https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/resolve/main/llama-2-7b-chat.ggmlv3.q4_0.bin?download=true)
+Download the quntize model from `huggingface` :hugs:, create a model folder and keep the model in the folder, 
+  - The chat model used is [llama-2-7b-chat.ggmlv3.q4_0.bin](https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/blob/main/llama-2-7b-chat.ggmlv3.q4_0.bin) 
+  - Downloaded from [here...](https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/resolve/main/llama-2-7b-chat.ggmlv3.q4_0.bin?download=true)
+  - Create a `model` file in `root` directory
+  - Paste the model to `model` directory
 
 - Embedding Model
   - The embedding model used is [sentence-transformers/all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2). 
