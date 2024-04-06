@@ -1,7 +1,5 @@
 # fpbot
 
-# medical-bot
-
 ## How to set up the project
 
 ### Step 1: Clone the repo
