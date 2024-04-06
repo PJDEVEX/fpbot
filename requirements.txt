@@ -1,0 +1,23 @@
+# ctransformers==0.2.5 #https://pypi.org/project/ctransformers/0.2.5/
+# sentence-transformers==2.2.2 #https://pypi.org/project/sentence-transformers/2.2.2/
+# pinecone-client==3.2.2 #https://pypi.org/project/pinecone-client/3.2.2/
+# langchain==0.0.225 #https://pypi.org/project/langchain/0.0.225/
+# langchain-pinecone #TODO: need to update details
+# flask==3.0.2 #https://pypi.org/project/Flask/3.0.2/
+# langchain-community #TODO: need to update details
+# pypdf
+# python-dotenv
+# black
+# langchain-openai
+
+ctransformers==0.2.5
+sentence-transformers==2.2.2
+pinecone-client
+langchain==0.1.14
+flask==3.0.2
+pypdf
+python-dotenv
+black
+-e .
+
+
