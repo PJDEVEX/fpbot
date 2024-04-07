@@ -14,7 +14,7 @@ list_of_files = [
     "research/trials.py",
     "app.py",
     "store_index.py",
-    "static",
+    "static/",
     "templates/chat.html",
     "data",
 ]

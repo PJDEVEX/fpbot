@@ -15,6 +15,8 @@ load_dotenv()
 
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")
+HOST = os.getenv("HOST")
+PORT = os.getenv("PORT")
 
 embeddings = download_embedding_model()
 
@@ -27,9 +29,9 @@ index_name=PINECONE_INDEX_NAME
 index = pc.Index(PINECONE_INDEX_NAME)
 
 # Load the extracted data
-docsearch=PineconeVectorStore.from_existing_index(index, embeddings)
+docsearch=PineconeVectorStore.from_existing_index(index_name, embeddings)
 
-# 
+# Defien the prompt template
 PROMPT=PromptTemplate(template=prompt_template, input_variables=["context", "question"])
 chain_type_kwargs={"prompt": PROMPT}
 
@@ -52,5 +54,14 @@ qa=RetrievalQA.from_chain_type(
 def index():
     return render_template('chat.html')
 
+@app.route("/get", methods=["GET", "POST"])
+def chat():
+           msg = request.form['msg']
+           input = msg
+           print(input)
+           result = qa({"query": input})
+           print("Response: ", result['result'])
+           return str(result['result'])
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host=HOST, port=PORT, debug=True)
