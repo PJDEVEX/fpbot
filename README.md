@@ -42,6 +42,8 @@ PINECONE_INDEX_NAME=xxx-xxxxxxxxxxxxxxx
 PINECONE_ENV=xxxxxxxxxxxxxxxxxxxxxxxxxx
 
 EMBEDDING_MODEL_NAME=xxxxxxxxxxxxxxxxxx
+HOST=0.0.0.0
+PORT=5000
 
 ```
 
