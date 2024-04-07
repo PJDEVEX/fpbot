@@ -1,4 +1,6 @@
-# fpbot
+# FpBot
+
+![FpBot](https://res.cloudinary.com/pjdevex/image/upload/v1712507574/Screenshot_2024-04-07_181503_gaskzh.png)
 
 ## How to set up the project
 
@@ -47,17 +49,24 @@ Download the quntize model from `huggingface` :hugs:, create a model folder and 
   - Create a `model` file in `root` directory
   - Paste the model to `model` directory
 
-- Embedding Model
+### Step6: Embedding Model
   - The embedding model used is [sentence-transformers/all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2). 
   - Please copy ```bash sentence-transformers/all-MiniLM-L6-v2``` and past in .env file.
   - It uses 384 dimensions.
 
+### Step7: Create a Pinecone Index
+- Visit [Pinecone.io](https://docs.pinecone.io/home), create an API and Index
+- Dimenstion shall be `384` or depend on the embedding model being used
+- Update .env accordinly
 
-## Project Architect
+### Step8: Execute locally
+- use the command `python3 app.py`.
+
+## Project Architecture
 
 <details>
   <summary>Click here...</summary>
-  <img src="https://res.cloudinary.com/pjdevex/image/upload/v1711904175/project_architecture_wowaqd.webp" alt="Project Architect">
+  <img src="https://res.cloudinary.com/pjdevex/image/upload/v1712506903/Architecture_gg26gz.webp" alt="Project Architect">
 </details>
 
 ### Tech Stack

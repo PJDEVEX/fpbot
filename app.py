@@ -39,7 +39,7 @@ chain_type_kwargs={"prompt": PROMPT}
 llm=CTransformers(model="./model/llama-2-7b-chat.ggmlv3.q2_K.bin",
                   model_type="llama",
                   config={'max_new_tokens':512,
-                          'temperature':0.5},)
+                          'temperature':0.8},)
 
 # QA chain
 qa=RetrievalQA.from_chain_type(
