@@ -8,6 +8,8 @@ FpBot is your go-to assistant for navigating the intricate world of accounting a
 
 ## How to set up the project
 
+<details>
+  <summary>Click here...</summary>
 ### Step 1: Clone the repo
 ```bash
 Project repo: https://github.com/PJDEVEX/fpbot
@@ -63,6 +65,8 @@ Download the quantized model from `huggingface` :hugs:, create a model folder an
 
 ### Step8: Execute locally
 - use the command `python3 app.py`.
+
+</details>
 
 ## Project Architecture
 
