@@ -1,6 +1,10 @@
 # FpBot
 
-![FpBot](https://res.cloudinary.com/pjdevex/image/upload/v1712507574/Screenshot_2024-04-07_181503_gaskzh.png)
+![FpBot](https://res.cloudinary.com/pjdevex/image/upload/v1712512926/Screenshot_2024-04-07_200120_m9tvys.png)
+
+<h2>Introducing FpBot: Trusted Companion for Financial Professionals</h2>
+
+FpBot is your go-to assistant for navigating the intricate world of accounting and auditing standards, as well as tax regulations in Sri Lanka. Whether you're a seasoned financial expert or just starting out in the industry, FpBot is here to provide you with timely and accurate information to help you stay compliant and informed. With FpBot by your side, you can tackle complex financial challenges with confidence and ease. Let FpBot be your guide as you navigate the dynamic landscape of finance in Sri Lanka.
 
 ## How to set up the project
 
@@ -8,7 +12,7 @@
 ```bash
 Project repo: https://github.com/PJDEVEX/fpbot
 ```
-### Step 2: Create Vierual Environment
+### Step 2: Create Virtual Environment
 - Activate virtual environment
 ```bash
 source ~/anaconda3/bin/activate
@@ -25,7 +29,7 @@ conda activate fbbot
 pip3 install -r requirements.txt
 ```
 
-### Step4: Define Env varialbes
+### Step4: Define Env variables
 - create `.env`
 
 ```ini
@@ -39,11 +43,9 @@ EMBEDDING_MODEL_NAME=xxxxxxxxxxxxxxxxxx
 
 ```
 
-### Step5: Download
+### Step5: Chat Model
 
-- Chat Model
-
-Download the quntize model from `huggingface` :hugs:, create a model folder and keep the model in the folder, 
+Download the quantized model from `huggingface` :hugs:, create a model folder and keep the model in the folder, 
   - The chat model used is [llama-2-7b-chat.ggmlv3.q4_0.bin](https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/blob/main/llama-2-7b-chat.ggmlv3.q4_0.bin) 
   - Downloaded from [here...](https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/resolve/main/llama-2-7b-chat.ggmlv3.q4_0.bin?download=true)
   - Create a `model` file in `root` directory
@@ -56,8 +58,8 @@ Download the quntize model from `huggingface` :hugs:, create a model folder and 
 
 ### Step7: Create a Pinecone Index
 - Visit [Pinecone.io](https://docs.pinecone.io/home), create an API and Index
-- Dimenstion shall be `384` or depend on the embedding model being used
-- Update .env accordinly
+- Dimension shall be `384` or depend on the embedding model being used
+- Update .env accordingly
 
 ### Step8: Execute locally
 - use the command `python3 app.py`.
@@ -74,19 +76,15 @@ Download the quntize model from `huggingface` :hugs:, create a model folder and 
 <details>
 <summary>Click here...</summary>
 
-|#|Component|Dependancy/Library|version|Badge|Purpose|Ref|
+|#|Component|Dependency/Library|version|Badge|Purpose|Ref|
 |---|:---|:---|:---|:---|:---|:---|
-|1|Programming Language| Python|3.8|![Python](https://img.shields.io/badge/Python-3.x-blue.svg)|Interpriter|[Python](https://www.python.org/)|
-|2|Generative AI Framework(s)|LangChain|0.0.225|[![langchain](https://img.shields.io/badge/langchain-0.0.225-orange)](https://pypi.org/project/langchain/0.0.225/)|Framework for building the application with LLMs through composability|[Langchain](https://python.langchain.com/docs/get_started/introduction)
+|1|Programming Language| Python|3.10|![Python](https://img.shields.io/badge/Python-3.10-blue.svg)|Interpriter|[Python](https://www.python.org/)|
+|2|Generative AI Framework(s)|LangChain|0.1.14|[![langchain](https://img.shields.io/badge/langchain-0.0.225-orange)](https://pypi.org/project/langchain/0.1.14/)|Framework for building the application with LLMs through composability|[Langchain](https://python.langchain.com/docs/get_started/introduction)
 |3|"|LLamaIndex||[![LLama Index](https://img.shields.io/badge/LLama_Index-G.%20Framework-<COLOR>.svg)](https://your-link-url)|data framework for building LLM applications|[lamaIndex](https://www.llamaindex.ai/)
-|4| Frontend-webapp|Flask|3.0.2|[![Flask](https://img.shields.io/badge/Flask-Web%20Framework-green)](https://flask.palletsprojects.com/)|||
+|4| Frontend-webapp|Flask|3.0.2|[![Flask](https://img.shields.io/badge/Flask-3.0.2-green)](https://flask.palletsprojects.com/)|||
 |5|LLM|Meta Llama2||[![Meta LLama2](https://img.shields.io/badge/Meta_LLama2-LLM-blueviolet)](https://example.com)||[Meta Llama2](https://llama.meta.com/llama2/)|
-|6|VectorDB|Pinecone|3.2.2|[![Pinecone Client](https://img.shields.io/badge/Pinecone_Client-orange?style=for-the-badge&logo=python)](https://pypi.org/project/pinecone-client/)|VectorDB|[Pinecone](https://python.langchain.com/docs/integrations/vectorstores/pinecone)|
-|7|Transformer|ctransformers|0.2.5|[![ctransformers](https://img.shields.io/badge/ctransformers-v0.2.5-orange)](https://pypi.org/project/ctransformers/0.2.5/)|Python bindings for the Transformer models implemented in C/C++ using GGML library.|[C Transformers](https://python.langchain.com/docs/integrations/llms/ctransformers)|
-|8|Embedding tool|sentence-transformers|2.2.2|[![sentence-transformers](https://img.shields.io/pypi/v/sentence-transformers.svg?color=orange)](https://pypi.org/project/sentence-transformers/)| Multilingual Sentence, Paragraph, and Image Embeddings using BERT & Co.|[Sentence Transformers on Hugging Face](https://python.langchain.com/docs/integrations/text_embedding/sentence_transformers)|
+|6|VectorDB|Pinecone-client|3.2.2|[![Pinecone Client](https://img.shields.io/badge/Pinecone_Client-orange?style=for-the-badge&logo=python)](https://pypi.org/project/pinecone-client/)|VectorDB|[Pinecone-client](https://pypi.org/project/pinecone-client/)|
+|7|Transformer|ctransformers|0.2.27|[![ctransformers](https://img.shields.io/badge/ctransformers-v0.2.5-orange)](https://pypi.org/project/ctransformers/0.2.27/)|Python bindings for the Transformer models implemented in C/C++ using GGML library.|[C Transformers](https://python.langchain.com/docs/integrations/llms/ctransformers)|
+|8|Embedding tool|sentence-transformers|2.6.1|[![Sentence Transformers](https://img.shields.io/pypi/v/sentence-transformers.svg?color=orange)](https://pypi.org/project/sentence-transformers/)| Multilingual Sentence, Paragraph, and Image Embeddings using BERT & Co.|[Sentence Transformers on Hugging Face](https://python.langchain.com/docs/integrations/text_embedding/sentence_transformers)|
 
 </details>
-
-
-
-### 
